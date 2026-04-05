@@ -1,0 +1,53 @@
+[project]
+name = "acty"
+version = "0.1.0"
+description = "High-level group runtime with TUI and CLI built on top of acty-core"
+readme = "README.md"
+requires-python = ">=3.12"
+license = "MIT"
+license-files = ["LICENSE"]
+maintainers = [{ name = "Konstantin Polev", email = "70580603+conspol@users.noreply.github.com" }]
+keywords = ["asyncio", "runtime", "scheduler", "tui", "workflow"]
+classifiers = [
+  "Development Status :: 3 - Alpha",
+  "Environment :: Console",
+  "Intended Audience :: Developers",
+  "License :: OSI Approved :: MIT License",
+  "Programming Language :: Python :: 3",
+  "Programming Language :: Python :: 3.12",
+  "Programming Language :: Python :: 3.13",
+  "Topic :: Software Development :: Libraries",
+  "Topic :: Terminals",
+]
+dependencies = [
+  "acty-core>=0.1.0,<0.2.0",
+  "tenacity>=8.2.0",
+  "textual>=6.11.0",
+  "textual-plotext>=1.0.1",
+]
+
+[project.optional-dependencies]
+langchain = [
+  "acty-langchain>=0.1.0,<0.2.0",
+]
+dev = [
+  "build>=1.2.2",
+  "pytest>=9.0.0",
+  "pytest-asyncio>=1.3.0",
+  "twine>=5.1.1",
+]
+
+[project.urls]
+Homepage = "https://github.com/conspol/acty"
+Repository = "https://github.com/conspol/acty"
+Issues = "https://github.com/conspol/acty/issues"
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/acty"]
+
+[project.scripts]
+acty-tui = "acty.tui.cli:main"
