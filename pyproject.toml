@@ -1,13 +1,13 @@
 [project]
 name = "acty"
-version = "0.1.0"
-description = "High-level group runtime with TUI and CLI built on top of acty-core"
+version = "0.1.1"
+description = "Run grouped async jobs for Python, AI agents, and LLM systems with shared setup, retries, lane fairness, cache-aware sessions, and a Textual TUI."
 readme = "README.md"
 requires-python = ">=3.12"
 license = "MIT"
 license-files = ["LICENSE"]
 maintainers = [{ name = "Konstantin Polev", email = "70580603+conspol@users.noreply.github.com" }]
-keywords = ["asyncio", "runtime", "scheduler", "tui", "workflow"]
+keywords = ["asyncio", "ai-agents", "multi-agent", "llm", "orchestration", "scheduler", "tui", "workflow"]
 classifiers = [
   "Development Status :: 3 - Alpha",
   "Environment :: Console",
